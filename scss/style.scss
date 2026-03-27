@@ -1,0 +1,55 @@
+:root {
+  --color-main : #4D9600;
+}
+
+/* -------------
+base
+---------------*/
+
+html {
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  word-break: break-all;
+  font-size: 10px;
+}
+
+body {
+  font-family:
+    "Yu Mincho",          // Mac
+    "YuMincho",           // Windows
+    "游明朝",              // 日本語名（共通）
+    "Hiragino Mincho ProN", // Macフォールバック
+    "MS PMincho",         // Windowsフォールバック
+    serif;
+    font-weight: 500;
+    color: #000;
+    font-size: 1.6rem;
+    line-height: calc(25 / 16);
+    letter-spacing: 0;
+}
+
+/* -------------
+common
+---------------*/
+/* PC.SPの非表示 */
+@media (max-width: 767px) {
+  .pc {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .sp {
+    display: none !important;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  cursor: pointer !important;
+}
