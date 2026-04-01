@@ -12,25 +12,53 @@
 
 <body>
   <div id="container">
-        <header class="header">
-          <div class="inner">
-            <h1 class="header__logo">
-              <a href="#">株式会社北村建設興業</a>
-            </h1>
-            <nav class="header__nav pc">
-              <ul>
-                <li>
-                  <a href="#menu">MENU</a>
-                </li>
-                <li>
-                  <a href="#about">ABOUT</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </header>
+  <header class="header">
+    <div class="inner">
+      <h1 class="header__logo">
+        <a href="#">株式会社北村建設興業</a>
+      </h1>
+
+      <!-- PCナビ -->
+      <nav class="header__nav pc">
+        <ul>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#service">SERVICE</a></li>
+          <li><a href="#works">WORKS</a></li>
+          <li><a href="#news">NEWS</a></li>
+          <li><a href="#company">COMPANY</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <!-- ハンバーガーボタン -->
+      <button id="js-hamburger" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- SPメニュー -->
+    <div class="header-menu">
+      <nav>
+        <ul>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#service">SERVICE</a></li>
+          <li><a href="#works">WORKS</a></li>
+          <li><a href="#news">NEWS</a></li>
+          <li><a href="#company">COMPANY</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- オーバーレイ -->
+    <div id="js-overlay" class="overlay"></div>
+  </header>
         <main></main>
         <footer></footer>
   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
