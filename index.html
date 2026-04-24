@@ -8,57 +8,95 @@
   <meta name="robots" content="noindex">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
 </head>
 
 <body>
   <div id="container">
-  <header class="header">
-    <div class="inner">
-      <h1 class="header__logo">
-        <a href="#">株式会社北村建設興業</a>
-      </h1>
+    <header class="header">
+      <div class="inner">
+        <h1 class="header__logo">
+          <a href="#">株式会社北村建設興業</a>
+        </h1>
 
-      <!-- PCナビ -->
-      <nav class="header__nav pc">
-        <ul>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#service">SERVICE</a></li>
-          <li><a href="#works">WORKS</a></li>
-          <li><a href="#news">NEWS</a></li>
-          <li><a href="#company">COMPANY</a></li>
-          <li><a href="#contact">CONTACT</a></li>
-        </ul>
-      </nav>
+        <!-- PCナビ -->
+        <nav class="header__nav pc">
+          <ul>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#service">SERVICE</a></li>
+            <li><a href="#works">WORKS</a></li>
+            <li><a href="#news">NEWS</a></li>
+            <li><a href="#company">COMPANY</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
 
-      <!-- ハンバーガーボタン -->
-      <button id="js-hamburger" class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
+        <!-- ハンバーガーボタン -->
+        <button id="js-hamburger" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
 
-    <!-- SPメニュー -->
-    <div class="header-menu">
-      <nav>
-        <ul>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#service">SERVICE</a></li>
-          <li><a href="#works">WORKS</a></li>
-          <li><a href="#news">NEWS</a></li>
-          <li><a href="#company">COMPANY</a></li>
-          <li><a href="#contact">CONTACT</a></li>
-        </ul>
-      </nav>
-    </div>
+      <!-- SPメニュー -->
+      <div class="header-menu">
+        <nav>
+          <ul>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#service">SERVICE</a></li>
+            <li><a href="#works">WORKS</a></li>
+            <li><a href="#news">NEWS</a></li>
+            <li><a href="#company">COMPANY</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
 
-    <!-- オーバーレイ -->
-    <div id="js-overlay" class="overlay"></div>
-  </header>
-        <main></main>
-        <footer></footer>
+      <!-- オーバーレイ -->
+      <div id="js-overlay" class="overlay"></div>
+    </header>
+
+    <main>
+      <!-- FV -->
+      <section class="slide-area">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture>
+                <source media="(min-width: 768px)" srcset="./img/FirstView_01.jpg">
+                <img src="./img/SP_FirstView-1.jpg" alt="大きな屋根の画像">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source media="(min-width: 768px)" srcset="./img/FirstView02.jpg">
+                <img src="./img/SP_FirstView-2.jpg" alt="山の中にある古民家の画像">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source media="(min-width: 768px)" srcset="./img/FirstView03.jpg">
+                <img src="./img/SP_FirstView-3.jpg" alt="温泉宿の画像">
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="fv__contents">
+          <div class="fv__catch">
+            <h2>
+              永遠も。<br class="sp-only">瞬間も。<br>あなたと共に。
+            </h2>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
