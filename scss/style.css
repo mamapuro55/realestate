@@ -57,7 +57,7 @@ header
 ---------------*/
 .header {
   padding-inline: 20px;
-  background: #eb88c3;
+  background-color: transparent;
   position: fixed;
   top: 0;
   left: 0;
@@ -189,7 +189,7 @@ header
   transition: 0.4s;
 }
 .hamburger span:nth-of-type(1) {
-  top: 8%;
+  top: 28%;
 }
 .hamburger span:nth-of-type(3) {
   top: 72%;
@@ -261,15 +261,61 @@ header
 /* =====================
 body
 ===================== */
-body {
-  padding-top: 80px;
-}
-@media (max-width: 767px) {
-  body {
-    padding-top: 50px;
-  }
-}
 body.is-nav-open {
   overflow: hidden;
+}
+
+/* =====================
+FV
+===================== */
+.slide-area {
+  position: relative;
+  height: 98vh;
+}
+@media (max-width: 767px) {
+  .slide-area {
+    height: 87vh;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.fv__contents {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  padding-top: 24px;
+  padding-left: 10px;
+}
+
+.fv__catch h2 {
+  color: #fff;
+  font-size: 3.7037037037vw;
+  line-height: 1.75;
+  letter-spacing: 0.3em;
+  text-align: center;
+  text-shadow: 5px 5px 5px #000;
+}
+@media (max-width: 767px) {
+  .fv__catch h2 {
+    font-size: 8vw;
+    line-height: 2;
+  }
 }
 /*# sourceMappingURL=style.css.map */

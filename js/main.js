@@ -61,3 +61,12 @@ $(function () {
     $('body').removeClass('is-nav-open');
   }
 });
+
+// swiper
+const swiper = new Swiper('.swiper', {
+  loop: true,          // ループ再生
+  autoplay: {
+    delay: 3000,       // 3秒ごとに切り替え
+    disableOnInteraction: false, // スワイプ後も自動再生を続ける
+  },
+});
