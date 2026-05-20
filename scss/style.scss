@@ -59,6 +59,13 @@ a {
   cursor: pointer !important;
 }
 
+.sp_only {
+  display: none;
+  @media (max-width: 767px) {
+      display: inline;
+    }
+}
+
 /* -------------
 header
 ---------------*/
@@ -317,9 +324,9 @@ FV
 ===================== */
 .slide-area {
   position: relative;
-  height: 98vh;
+  height: 106vh;
   @media (max-width: 767px) {
-    height: 87vh;
+    height: 100vh;
   }
 }
 
@@ -358,5 +365,74 @@ FV
     @media (max-width: 767px) {
       font-size: calc(30 / 375 * 100vw);
       line-height: calc(60 / 30);
+  }
+}
+
+/* =====================
+about
+===================== */
+#about {
+  position: relative;
+}
+
+.about__contents {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 16px;
+  padding-right: 303px;
+    @media (max-width: 767px) {
+      padding-top: 9px;
+      padding-right: 0;
+      padding-bottom: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  display: flex;
+  flex-direction: column;
+    @media (max-width: 767px) {
+      display: flex;
+      flex-direction: row;
+      gap: 23px;
+    }
+
+  h2 {
+  font-size: calc(30 / 1080 * 100vw);
+  line-height: 1;
+  letter-spacing: 0.15em;
+    @media (max-width: 767px) {
+      font-size: calc(25 / 375 * 100vw);
+      line-height: 11.7;
+      letter-spacing: 0.5rem;
+
+    }
+  }
+
+  p {
+    font-size: calc(18 /1080 * 100vw);
+    line-height: 2.66;
+    letter-spacing: 0.38em;
+    white-space: pre-line;
+    // margin-right: 13px;
+    @media (max-width: 767px) {
+      font-size: calc(16 / 375 * 100vw);
+      line-height: 1.65; // ← PCと同じ値に戻す
+      letter-spacing: 0.25em;
+      margin-right: 0;
+      gap: 30px;
+          
+    }
   }
 }
