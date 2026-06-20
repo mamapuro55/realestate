@@ -385,6 +385,164 @@
         </div>
       </section>
 
+      <!-- contact -->
+      <section id="contact">
+        <div class="inner">
+          <div class="section-title">
+            <h2 class="section-title__en">CONTACT</h2>
+            <p class="section-title__ja">お問い合わせ</p>
+          </div>
+          <div class="contact__txt">
+            ３営業日以内にメールにてご連絡いたします。*は入力必須項目となります。
+          </div>
+
+          <form action="#" method="post">
+            <div class="form__items">
+              <!-- 名前（横並び） -->
+              <div class="form__item form__item--row">
+                <label for="your-name" class="form__label">お名前 *</label>
+                <input type="text" name="your-name" id="your-name" class="form-control" placeholder="例：北村 太郎">
+              </div>
+
+              <!-- 性別（横並び・ラジオ） -->
+              <div class="form__item form__item--row">
+                <span class="form__label">性別</span>
+                <div class="form__radio-group">
+                  <label class="form__radio-label">
+                    <input type="radio" name="your-gender" id="gender-male" value="male"> 男性
+                  </label>
+                  <label class="form__radio-label">
+                    <input type="radio" name="your-gender" id="gender-female" value="female"> 女性
+                  </label>
+                </div>
+              </div>
+              
+
+              <!-- メールアドレス（横並び） -->
+              <div class="form__item form__item--row">
+                <label for="your-email" class="form__label">メールアドレス *</label>
+                <input type="email" name="your-email" id="your-email" class="form-control" placeholder="例：aaaaaaaa@gmail.com">
+              </div>
+
+              <!-- お問い合わせ種別（横並び） -->
+              <div class="form__item form__item--row">
+                <label for="your-type" class="form__label">問い合わせ種別</label>
+                <select name="your-type" id="your-type" class="form-control form-select">
+                  <option value="">家づくりについて</option>
+                  <option value="general">一般的なご質問</option>
+                  <option value="support">サポート</option>
+                  <option value="other">その他</option>
+                </select>
+              </div>
+
+              <!-- 内容（縦並び） -->
+              <div class="form__item form__item--column">
+                <label for="your-content" class="form__label">内容 *</label>
+                <textarea name="your-content" id="your-content" class="form-control form-textarea"></textarea>
+              </div>
+
+              <!-- 何を見て知りましたか -->
+              <div class="form__item form__item--column">
+                <span class="form__title">何を見て当社HPを知りましたか？（複数回答可） *</span>
+                <div class="form__checkbox-group">
+                  <label class="form__checkbox-label">
+                    <input type="checkbox" name="how" id="how-web" value="web"> インターネット
+                  </label>
+                  <label class="form__checkbox-label">
+                    <input type="checkbox" name="how" id="how-sns" value="sns"> チラシ
+                  </label>
+                  <label class="form__checkbox-label">
+                    <input type="checkbox" name="how" id="how-friend" value="friend"> 住宅展示場
+                  </label>
+                  <label class="form__checkbox-label">
+                    <input type="checkbox" name="how" id="how-flyer" value="flyer"> 看板
+                  </label>
+                  <label class="form__checkbox-label">
+                    <input type="checkbox" name="how" id="how-magazine" value="magazine"> 各種SNS
+                  </label>
+                  <label class="form__checkbox-label">
+                    <input type="checkbox" name="how" id="how-tv" value="tv"> 紹介
+                  </label>
+                  <label class="form__checkbox-label">
+                    <input type="checkbox" name="how" id="how-search" value="search"> 通りがかり
+                  </label>
+                  <label class="form__checkbox-label">
+                  <input type="checkbox" name="how" id="how-other" value="other"> その他
+                  </label>
+                </div>
+              </div>
+
+              
+
+              <!-- 個人情報（アコーディオン） -->
+              <div class="form__item form__item--column">
+              <span class="form__title">個人情報保護方針</span>
+
+              <div class="privacy-content">
+                <div class="privacy-content__scroll">
+                <div class="privacy-content__inner">
+                  <h3>個人情報取扱事業者の氏名又は名称(法24条1項1号)</h3>
+                  <p>株式会社 北村建設興業</p>
+
+                  <h3>個人情報の取り扱い</h3>
+                  <p>
+                    弊社は、個人情報保護に関連する法令を遵守し、
+                    お客様からご提供いただく個人情報を細心の注意を払って取り扱っております。
+                    このプライバシーポリシーでは、当社におけるお客様の個人情報の取扱いについてご説明しております。
+                  </p>
+
+                  <h3>個人情報の利用目的(法18条、15条)</h3>
+                  <p>
+                    弊社は建築物の設計、施工を主とした当社業務ならびに
+                    アフターサービスをさせていただく上で、
+                    お客様の個人情報を原則として次の利用目的の範囲内で利用させていただきます。
+                  </p>
+                  <ul>
+                    <li>ご注文いただいた工事を適切に完成させるため</li>
+                    <li>商品及びサービスの提供に関する手続きを支援するため</li>
+                    <li>商品やサービスのお知らせをお届けするため</li>
+                    <li>見学会等へご来場のお客様へのご商談のため</li>
+                    <li>商品やサービス向上のため</li>
+                  </ul>
+
+                  <h3>保有個人データ利用目的(法24条1項2号)</h3>
+                  <ul>
+                    <li>アフターメンテナンスを行うため</li>
+                    <li>サービス提供のため</li>
+                    <li>新商品などの情報をお知らせするため</li>
+                    <li>お客様に適したサービスを提供するため</li>
+                  </ul>
+
+                  <h3>個人情報の安全対策</h3>
+                  <p>
+                    お客様の個人情報を安全に管理・運営するよう努めており、
+                    不正アクセスや漏えい等を防止するための合理的かつ適切な安全対策を実施しています。
+                  </p>
+
+                  <h3>プライバシーポリシーに関するお問合せ先</h3>
+                  <p>
+                    株式会社北村建設興業<br>
+                    長崎県長崎市横尾○丁目○-○<br>
+                    TEL：000-000-0000<br>
+                    FAX：000-000-0000<br>
+                    Mail：info@example.com
+                  </p>
+                </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- 送信ボタン -->
+            <div class="contact__button">
+              <input type="submit" name="submit" class="form-submit" value="内容に同意して送信">
+            </div>
+
+            </div>
+          </form>
+        </div>
+      </section>  
+
     </main>
     <footer></footer>
   </div>

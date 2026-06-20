@@ -882,7 +882,7 @@ company
 }
 @media (max-width: 767px) {
   #company {
-    padding: 5px 30px 50px;
+    padding: 53px 30px 50px;
   }
 }
 
@@ -1027,6 +1027,329 @@ iframe {
 @media (min-width: 768px) {
   .company__email a:hover {
     opacity: 0.7;
+  }
+}
+/* -------------
+contact
+/* ---------------*/
+#contact {
+  padding-block: 80px;
+  padding-inline: 30px;
+  background: rgba(77, 150, 0, 0.15);
+}
+@media (max-width: 767px) {
+  #contact {
+    padding-block: 50px;
+  }
+}
+#contact .inner {
+  max-width: 800px;
+}
+
+.contact__txt {
+  margin-top: 45px;
+  font-size: 2rem;
+  line-height: 1.65;
+}
+@media (max-width: 767px) {
+  .contact__txt {
+    margin-top: 38px;
+  }
+}
+
+.form__items {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 72px;
+}
+@media (max-width: 767px) {
+  .form__items {
+    gap: 0px;
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .form__item--row:nth-child(2) .form__label {
+    width: 90px;
+    min-width: 90px;
+  }
+}
+
+/* 共通 */
+.form__item {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .form__item:nth-child(2) {
+    margin-top: 35px;
+  }
+  .form__item:nth-child(3) {
+    margin-top: 30px;
+  }
+  .form__item:nth-child(4) {
+    margin-top: 30px;
+  }
+  .form__item:nth-child(5) {
+    margin-top: 30px;
+  }
+  .form__item:nth-child(6) {
+    margin-top: 20px;
+  }
+  .form__item:nth-child(7) {
+    margin-top: 30px;
+  }
+}
+
+.form-control {
+  width: 100%;
+  padding-block: 12px;
+  padding-left: 20px;
+  background: #fff;
+}
+
+.form-textarea {
+  height: 200px;
+  resize: vertical;
+  margin-top: 10px;
+}
+
+.form__title {
+  font-size: 2rem;
+  line-height: 1.65;
+}
+@media (max-width: 767px) {
+  .form__title {
+    line-height: 1.35;
+  }
+}
+
+.form__label {
+  width: 170px;
+  min-width: 170px;
+  font-size: 2rem;
+  line-height: 1.65;
+}
+@media (max-width: 767px) {
+  .form__label {
+    width: 170px;
+    min-width: 170px;
+  }
+}
+
+.form-control::-moz-placeholder {
+  font-size: 1.8rem;
+  line-height: 1.3888888889;
+  color: #A0A0A0;
+}
+
+.form-control::placeholder {
+  font-size: 1.8rem;
+  line-height: 1.3888888889;
+  color: #A0A0A0;
+}
+
+/* 横並び */
+.form__item--row {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .form__item--row {
+    display: block;
+  }
+}
+
+.form__items .form__item--row:nth-child(2) {
+  /* 性別ラベルの幅も縮める */
+}
+@media (max-width: 767px) {
+  .form__items .form__item--row:nth-child(2) {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .form__items .form__item--row:nth-child(2) .form__label {
+    width: 90px;
+  }
+}
+
+/* 縦並び */
+.form__item--column {
+  flex-direction: column;
+}
+
+/* ラジオボタン */
+.form__radio-group {
+  display: flex;
+  gap: 74px;
+}
+@media (max-width: 767px) {
+  .form__radio-group {
+    gap: 45px;
+  }
+}
+.form__radio-group label {
+  display: flex;
+  align-items: center;
+}
+
+input[type=radio] {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 23px;
+}
+@media (max-width: 767px) {
+  input[type=radio] {
+    margin-right: 10px;
+  }
+}
+
+input[type=radio]:checked {
+  background-color: #000;
+  border-color: #808000;
+  box-shadow: inset 0 0 0 6px #fff; /* 内側に黒い円を描く */
+}
+
+/* 何を見て知りましたか*/
+input[type=checkbox] {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  margin-right: 20px;
+}
+@media (max-width: 767px) {
+  input[type=checkbox] {
+    margin-right: 12px;
+  }
+}
+
+input[type=checkbox]:checked::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 6px;
+  height: 12px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(45deg);
+}
+
+.form__checkbox-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* 折り返しを許可 */
+  gap: 9px 0px;
+}
+@media (max-width: 767px) {
+  .form__checkbox-group {
+    gap: 6px 0px;
+  }
+}
+.form__checkbox-group .form__checkbox-label {
+  width: 25%; /* 4列（100% ÷ 4） */
+  font-size: 1.8rem;
+  line-height: 1.3888888889;
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
+}
+@media (max-width: 767px) {
+  .form__checkbox-group .form__checkbox-label {
+    width: 50%; /* 2列（100% ÷ 2） */
+    font-size: 1.6rem;
+    line-height: 1.5625;
+    margin-top: 0;
+  }
+}
+
+/* 個人情報 */
+.form__privacy-title {
+  margin-bottom: 8px;
+}
+
+.privacy-content {
+  background-color: #fff;
+  padding: 40px 10px 40px 40px;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 10px;
+}
+@media (max-width: 767px) {
+  .privacy-content {
+    height: 323px;
+    padding: 27px 10px 10px 33px;
+  }
+}
+
+.privacy-content__scroll {
+  height: 220px;
+  overflow-y: scroll;
+}
+.privacy-content__scroll::-webkit-scrollbar {
+  width: 10px;
+}
+.privacy-content__scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  margin-top: -30px;
+  margin-bottom: -30px;
+}
+.privacy-content__scroll::-webkit-scrollbar-thumb {
+  background: #888;
+  height: 30px;
+  border-top: 5px solid #f1f1f1;
+  border-bottom: 5px solid #f1f1f1;
+  background-clip: padding-box;
+}
+
+.privacy-content__inner {
+  font-size: 1.8rem;
+  line-height: 1.7222222222;
+  padding-right: 40px;
+}
+.privacy-content__inner h3 {
+  margin-top: 30px;
+}
+.privacy-content__inner h3:first-child {
+  margin-top: 0;
+}
+
+/* 送信ボタン */
+.contact__button {
+  text-align: center;
+  margin-top: 31px;
+}
+@media (max-width: 767px) {
+  .contact__button {
+    margin-top: 46px;
+  }
+}
+
+.form-submit {
+  padding: 7px 60px;
+  background: var(--color-main);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 1.65;
+}
+@media (max-width: 767px) {
+  .form-submit {
+    padding-block: 7px;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
