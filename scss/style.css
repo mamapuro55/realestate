@@ -749,4 +749,128 @@ about
 #modal-close:hover {
   background: #f0f0f0;
 }
+
+/* =====================
+  news
+   ===================== */
+#news {
+  padding-block: 82px;
+  padding-inline: 30px;
+  background-color: rgba(75, 150, 0, 0.1);
+}
+@media (max-width: 767px) {
+  #news {
+    padding-block: 47px;
+    padding-inline: 30px;
+  }
+}
+
+.news__contents {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 75px;
+}
+@media (max-width: 767px) {
+  .news__contents {
+    display: flex;
+    flex-direction: column;
+    gap: 49px;
+    margin-top: 38px;
+  }
+}
+
+.news__items {
+  width: 46.5%;
+  background-color: #fff;
+}
+@media (max-width: 767px) {
+  .news__items {
+    width: 100%;
+  }
+}
+
+.news__caption {
+  background-color: #4D9600;
+  color: #fff;
+  padding: 9px 20px;
+  font-size: 2rem;
+  line-height: 1.65;
+}
+
+.news__content {
+  padding-inline: 20px;
+}
+
+.news__item {
+  display: flex;
+  gap: 70px;
+  padding-block: 14px;
+  border-bottom: 1px solid #55A500;
+  text-decoration: none;
+}
+@media (max-width: 767px) {
+  .news__item {
+    gap: 20px;
+    padding-block: 14px 13px;
+  }
+}
+.news__item time {
+  white-space: nowrap;
+  font-size: 1.6rem;
+  line-height: 2.0625;
+}
+.news__item p {
+  font-size: 1.8rem;
+  line-height: 1.3888888889;
+  margin-top: 4px;
+}
+@media (max-width: 767px) {
+  .news__item p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}
+
+.news__content:first-of-type .news__item {
+  padding-top: 25px;
+}
+
+.button_box {
+  display: inline-block;
+  position: relative;
+}
+.button_box a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #55A500;
+  text-decoration: none;
+  font-size: 2rem;
+  z-index: 1;
+}
+.button_box img {
+  display: block;
+  width: 80px;
+  height: auto;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.news_button {
+  padding-inline: 20px;
+  font-size: 2rem;
+  line-height: 1;
+  color: #55A500;
+  margin-left: auto;
+  padding-top: 23px;
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 767px) {
+  .news_button {
+    padding-top: 23px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

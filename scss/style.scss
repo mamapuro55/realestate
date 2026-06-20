@@ -749,3 +749,120 @@ about
     background: #f0f0f0;
   }
 }
+
+/* =====================
+  news
+   ===================== */
+#news {
+  padding-block: 82px;
+  padding-inline: 30px;
+  background-color: 
+  rgb(75 150 0 / 10%);
+  @media (max-width: 767px) {
+    padding-block: 47px;
+    padding-inline: 30px;
+  }
+}
+
+.news__contents {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 75px; 
+  @media (max-width: 767px) {
+  display: flex;
+  flex-direction: column;
+  gap: 49px;
+  margin-top: 38px;
+  }                    
+}
+
+.news__items {
+  width: 46.5%;
+  background-color: #fff;
+  @media (max-width: 767px) {
+  width: 100%;
+  }
+}
+
+.news__caption {
+  background-color: #4D9600;
+  color: #fff;
+  padding: 9px 20px;
+  font-size: 2rem;
+  line-height: calc(33 / 20);
+}
+.news__content {
+  padding-inline: 20px;
+}
+
+.news__item {
+  display: flex;
+  gap: 70px;
+  padding-block: 14px;
+  border-bottom: 1px solid #55A500;
+  text-decoration: none;
+  @media (max-width: 767px) {
+  gap: 20px;
+  padding-block: 14px 13px;
+  }
+
+  time {
+    white-space: nowrap;
+    font-size: 1.6rem;
+    line-height: calc(33 /16);
+  }
+
+  p {
+    font-size: 1.8rem;
+    line-height: calc(25 / 18);
+    margin-top: 4px;
+    @media (max-width: 767px) {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+  }
+}
+
+.news__content:first-of-type  .news__item {
+  padding-top: 25px;
+}
+
+.button_box {
+  display: inline-block;
+  position: relative;
+
+  a {
+    position: absolute;
+    top: 0; // 上に揃える
+    left: 0; // 左寄せ
+    color: #55A500;
+    text-decoration: none;
+    font-size: 2rem;
+    z-index: 1;
+  }
+
+  img {
+    display: block;
+    width: 80px;
+    height: auto;
+    margin-top: 12px;
+    margin-bottom: 20px;
+  }
+}
+
+.news_button {
+  padding-inline: 20px;
+  font-size: 2rem;
+  line-height: calc(20 / 20);
+  color: #55A500;
+  margin-left: auto;
+  padding-top: 23px;
+  display: flex;
+  justify-content: flex-end;
+  @media (max-width: 767px) {
+    padding-top: 23px;
+  }
+}
+
