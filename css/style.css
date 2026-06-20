@@ -364,7 +364,7 @@ FV
 ===================== */
 .slide-area {
   position: relative;
-  height: 104vh;
+  height: 93vh;
 }
 @media (max-width: 767px) {
   .slide-area {
@@ -447,7 +447,7 @@ about
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 16px;
+  padding-top: 0px;
   padding-right: 303px;
 }
 @media (max-width: 767px) {
@@ -524,7 +524,7 @@ about
   service
    ===================== */
 #service {
-  padding-block: 85px 110px;
+  padding-block: 80px 95px;
   padding-inline: 30px;
   background-color: rgba(75, 150, 0, 0.1);
 }
@@ -555,7 +555,7 @@ about
     letter-spacing: 0.3rem;
   }
   .service__item:nth-of-type(4) {
-    margin-top: 48px;
+    margin-top: 44px;
   }
 }
 
@@ -695,4 +695,155 @@ about
     margin-top: 10px;
     padding: 20px 20px 12px 20px;
   }
+}
+
+/* =====================
+  works
+   ===================== */
+#works {
+  position: relative;
+  z-index: 0;
+  padding-block: 81px 96px;
+}
+@media (max-width: 767px) {
+  #works {
+    padding-block: 48px 40px;
+    padding-inline: 30px;
+  }
+}
+
+.works__items {
+  position: relative;
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 4.347826087%;
+     -moz-column-gap: 4.347826087%;
+          column-gap: 4.347826087%;
+  margin-top: 72px;
+}
+@media (max-width: 767px) {
+  .works__items {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 19px;
+    margin-top: 37px;
+  }
+}
+
+.works-item__image img {
+  aspect-ratio: 200/200;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 767px) {
+  .works-item__image img {
+    aspect-ratio: 315/250;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+.works-item__textarea {
+  margin-top: 20px;
+}
+@media (max-width: 767px) {
+  .works-item__textarea {
+    margin-top: 12px;
+  }
+}
+
+.works-item__textarea p {
+  margin-top: 8px;
+  font-size: 1.6rem;
+  line-height: 1.5625;
+}
+
+/* ===== サムネイル ===== */
+.thumb {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.thumb picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.thumb:hover picture img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+/* ===== モーダルオーバーレイ ===== */
+#modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999999;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#modal-overlay.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* ===== モーダル本体 ===== */
+#modal-box {
+  position: relative;
+  background: #fff;
+  z-index: 100000;
+  padding: 15px 15px 10px 15px;
+  max-width: 450px;
+  width: 90%;
+  margin: 40px auto;
+}
+
+/* ===== 拡大画像 ===== */
+#modal-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+}
+
+/* ===== 案件名 ===== */
+.modal-text {
+  margin-top: 8px;
+}
+
+/* ===== ✕ボタン ===== */
+#modal-close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  padding: 0;
+  background: transparent;
+}
+#modal-close:hover {
+  background: #f0f0f0;
 }/*# sourceMappingURL=style.css.map */

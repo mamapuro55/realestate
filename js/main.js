@@ -70,3 +70,44 @@ const swiper = new Swiper('.swiper', {
     disableOnInteraction: false, // スワイプ後も自動再生を続ける
   },
 });
+
+$(function () {
+
+  // サムネイルクリック
+  $(".thumb").on("click", function () {
+
+    const imgSrc = $(this).data("src");
+    const text = $(this).data("text");
+
+    $("#modal-img").attr("src", imgSrc);
+    $("#modalText").text(text);
+
+    $("#modal-overlay").addClass("active");
+
+    // 背景スクロール停止
+    $("body").css("overflow", "hidden");
+  });
+
+  // 閉じるボタン
+  $("#modal-close").on("click", function () {
+    closeModal();
+  });
+
+  // 背景クリックで閉じる
+  $("#modal-overlay").on("click", function (e) {
+
+    // 白いボックス以外をクリックした時
+    if (!$(e.target).closest("#modal-box").length) {
+      closeModal();
+    }
+
+  });
+
+  function closeModal() {
+    $("#modal-overlay").removeClass("active");
+
+    // 背景スクロール再開
+    $("body").css("overflow", "");
+  }
+
+});

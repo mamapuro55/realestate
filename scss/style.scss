@@ -90,11 +90,11 @@ a {
     letter-spacing: 0.3em;
     color: var(--color-main);
     text-transform: uppercase;
-     @media (max-width: 767px) {
+    @media (max-width: 767px) {
       font-size: 3rem;
       line-height: calc(33 /30);
       letter-spacing: 0.3em;
-     }
+    }
   }
 
   &__ja {
@@ -368,7 +368,7 @@ FV
 ===================== */
 .slide-area {
   position: relative;
-  height: 104vh;
+  height: 93vh;
   @media (max-width: 767px) {
     height: 87vh;
   }
@@ -432,7 +432,7 @@ about
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 16px;
+  padding-top: 0px;
   padding-right: 303px;
   @media (max-width: 767px) {
     padding-top: 9px;
@@ -485,7 +485,7 @@ about
   service
    ===================== */
 #service {
-  padding-block: 85px 110px;
+  padding-block: 80px 95px;
   padding-inline: 30px;
   background-color: rgb(75 150 0 / 10%);
     @media (max-width: 767px) {
@@ -510,7 +510,7 @@ about
     letter-spacing: 0.3rem;
 
     &:nth-of-type(4) {
-    margin-top: 48px;
+    margin-top: 44px;
     }
   }
 }
@@ -621,4 +621,131 @@ about
       padding: 20px 20px 12px 20px;
     }
   } 
+}
+
+/* =====================
+  works
+   ===================== */
+#works {
+  position: relative;
+  z-index: 0;
+  padding-block: 81px 96px;
+  @media (max-width: 767px) {
+    padding-block: 48px 40px;
+    padding-inline: 30px;
+  }
+}
+
+.works__items {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  column-gap: calc(40 / 920 *100%);
+  margin-top: 72px;
+  @media (max-width: 767px) {
+    width: 100%;
+    flex-direction: column;
+    gap: 19px;
+    margin-top: 37px;
+  }
+}
+
+.works-item__image img {
+  aspect-ratio: 200 / 200;
+  object-fit: cover;
+  @media (max-width: 767px) {
+  aspect-ratio: 315 / 250;
+  object-fit: cover;
+  }
+}
+
+.works-item__textarea {
+  margin-top: 20px;
+  @media (max-width: 767px) {
+  margin-top: 12px;
+  }
+}
+
+.works-item__textarea p {
+  margin-top: 8px;
+  font-size: 1.6rem;
+  line-height: calc(25 / 16);
+}
+
+/* ===== サムネイル ===== */
+.thumb {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.thumb picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.thumb:hover picture img {
+  transform: scale(1.05);
+}
+
+/* ===== モーダルオーバーレイ ===== */
+#modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999999; // ← 大きい値に変更
+  align-items: center;
+  justify-content: center;
+
+  &.active {
+    display: flex;
+  }
+}
+
+/* ===== モーダル本体 ===== */
+#modal-box {
+  position: relative;
+  background: #fff;
+  z-index: 100000;
+  padding: 15px 15px 10px 15px;
+  max-width: 450px;
+  width: 90%;
+  margin: 40px auto;
+}
+
+/* ===== 拡大画像 ===== */
+#modal-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+}
+
+/* ===== 案件名 ===== */
+.modal-text {
+  margin-top: 8px;
+}
+
+/* ===== ✕ボタン ===== */
+#modal-close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  padding: 0;
+  background: transparent;
+  // border: 1px solid #ccc;
+  // border-radius: 50%;
+
+  &:hover {
+    background: #f0f0f0;
+  }
 }
