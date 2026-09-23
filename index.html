@@ -8,29 +8,654 @@
   <meta name="robots" content="noindex">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
 </head>
 
 <body>
   <div id="container">
-        <header class="header">
-          <div class="inner">
-            <h1 class="header__logo">
-              <a href="#">株式会社北村建設興業</a>
+  <!-- header -->
+    <header id="top">
+      <div class="header">
+        <div class="header__inner">
+          <h1 class="header__logo">
+          <a href="#">株式会社北村建設興業</a>
             </h1>
+
+            <!-- ハンバーガーボタン -->
+            <div id="js-hamburger" class="hamburger">
+              <div class="hamburger__inner">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <!-- PCナビ -->
             <nav class="header__nav pc">
               <ul>
-                <li>
-                  <a href="#menu">MENU</a>
-                </li>
-                <li>
-                  <a href="#about">ABOUT</a>
-                </li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#service">SERVICE</a></li>
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="#news">NEWS</a></li>
+                <li><a href="#company">COMPANY</a></li>
+                <li><a href="#contact">CONTACT</a></li>
               </ul>
             </nav>
           </div>
-        </header>
-        <main></main>
-        <footer></footer>
+        </div>
+      </header>
+          <!-- SPメニュー -->
+          <div class="header-menu">
+            <nav>
+              <ul>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#service">SERVICE</a></li>
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="#news">NEWS</a></li>
+                <li><a href="#company">COMPANY</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+              </ul>
+            </nav>
+          </div>
+        
+
+      <!-- オーバーレイ -->
+      <div id="js-overlay" class="overlay"></div>
+    
+
+    <main>
+    <!-- FV -->
+      <section id="fv" class="slide-area">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture>
+                <source media="(min-width: 768px)" srcset="./img/FirstView_01.jpg">
+                <img src="./img/SP_FirstView-1.jpg" alt="大きな屋根の画像">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source media="(min-width: 768px)" srcset="./img/FirstView02.jpg">
+                <img src="./img/SP_FirstView-2.jpg" alt="山の中にある古民家の画像">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source media="(min-width: 768px)" srcset="./img/FirstView03.jpg">
+                <img src="./img/SP_FirstView-3.jpg" alt="温泉宿の画像">
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="fv__contents">
+          <div class="fv__catch">
+            <h2>
+              永遠も。<br class="sp_only">瞬間も。<br>あなたと共に。
+            </h2>
+          </div>
+        </div>
+      </section>
+
+<!-- about -->
+      <section id="about">
+      <div class="about__image fade-in">
+        <picture>
+            <source media="(min-width: 768px)" srcset="./img/About.jpg">
+            <img src="./img/sp_About.jpg" alt="説明をしている女性">
+          </picture>
+      </div>
+      <div class="about__contents fade-in fade-in-delay">
+        <div class="vertical">
+          <h2>伝統とイマを繋ぐ</h2>
+          <p>
+            古来から伝わる伝統文化
+            昔からそこにある材料
+            その土地に長い間かけて
+            最適化してきた
+            たくさんのヒントを
+            イマを生きる私たちの
+            心地よさに取り入れ
+            新たな技術革新を
+            起こし続ける会社です
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- service -->
+    <section class="service" id="service">    
+      <div class="service__inner inner">
+        <div class="section-title fade-in">
+          <h2 class="section-title__en">SERVICE</h2>
+          <p class="section-title__ja">サービス</p>
+        </div>
+
+        <div class="service__contents">
+          <div class="service__items">
+            <!-- 1 -->
+            <div class="service__item fade-in">
+              <div class="service__image service-image">
+                <div class="service-image_image">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./img/PC_SERVICE_01.jpg">
+                    <img src="./img/SP_SERVICE_01.jpg" alt="静岡県U.I様自宅の画像">
+                  </picture>
+                </div>
+                <div class="service-image_text">
+                  <p class="service__caption">静岡県U.I様自宅</p>
+                </div>
+              </div>
+              <div class="service_textbox">
+                <h3 class="service__title">新築<br class="pc-br">（土地探し〜建築）</h3>
+                <p class="service__text">
+                  土地探しから建築、施工まで
+                  <br>サポートいたします。
+                  <br>風水的観点からもご提案。
+                </p>
+              </div>
+            </div>
+
+            <!-- 2（左右反転） -->
+            <div class="service__item service__item--reverse fade-in">
+              <div class="service__image service-image">
+                <div class="service-image_image">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./img/PC_SERVICE_02.jpg">
+                    <img src="./img/SP_SERVICE_02.jpg" alt="北海道富良野市ブックカフェ">
+                  </picture>
+                </div>
+                <div class="service-image_text">
+                  <p class="service__caption">北海道富良野市ブックカフェ</p>
+                </div>
+              </div>
+              <div class="service_textbox">
+                <h3 class="service__title">リフォーム<br class="sp-br">リノベーション</h3>
+                <p class="service__text">
+                  温かみと雰囲気をそのままに
+                  <br>住み心地、使い心地を
+                  <br>追求しご提供いたします。
+                </p>
+              </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="service__item fade-in">
+              <div class="service__image service-image">
+                <div class="service-image_image">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./img/PC_SERVICE_03.jpg">
+                    <img src="./img/SP_SERVICE_03.jpg" alt="広島県竹原市の画像">
+                  </picture>
+                </div>
+                <div class="service-image_text">
+                  <p class="service__caption">広島県竹原市</p>
+                </div>
+              </div>
+              <div class="service_textbox">
+                <h3 class="service__title">都市計画〜開発<br class="sp-br">公共施設</h3>
+                <p class="service__text">
+                  都市計画から都市開発まで
+                  <br>ご提案いたします。
+                  <br>公共施設もさらに居心地良く。
+                </p>
+              </div>
+            </div>
+          </div>        
+        </div>
+      </div>
+    </section>
+
+    <!-- works-->
+    <section id="works">
+      <div class="inner">
+        <div class="works-title section-title fade-in">
+            <h2 class="works-title section-title__en">WORKS</h2>
+            <p class="works-title section-title__ja">施工事例</p>
+        </div>
+        <div class="works__contents">
+          <!-- 1 -->
+          <div class="works__items fade-in fade-in-delay"> 
+            <div class="works__item works-item thumb" data-src="./img/PC_WORKS_modal_01.jpg" data-text="【新築】長崎県T.O様自宅">
+              <div class="works-item__image">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/PC_WORKS_01.jpg">
+                  <img src="./img/SP_WORKS_01.jpg" alt="長崎県T.O様自宅">
+                </picture>
+              </div>
+              <div class="works-item__textarea">
+                <p>
+                【新築】
+                <br class="pc-br">長崎県T.O様自宅
+                </p>
+              </div>
+            </div>
+            <!-- 2 -->
+            <div class="works__item works-item thumb fade-in fade-in-delay2" data-src="./img/PC_WORKS_modal_02.jpg" data-text="【リノベーション】京都府カトリック丹波教会">
+              <div class="works-item__image">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/PC_WORKS_02.jpg">
+                  <img src="./img/SP_WORKS_02.jpg" alt="京都府カトリック丹波教会">
+                </picture>
+              </div>
+              <div class="works-item__textarea">
+                <p>
+                  【リノベーション】
+                  <br>京都府カトリック丹波教会
+                </p>
+              </div>
+            </div>
+
+            <!-- 3 -->         
+            <div class="works__item works-item thumb fade-in fade-in-delay3" data-src="./img/PC_WORKS_modal_03.jpg" data-text="【新築】東京都A.F様自宅件事務所">
+              <div class="works-item__image">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/PC_WORKS_03.jpg">
+                  <img src="./img/SP_WORKS_03.jpg" alt="東京都A.F様自宅件事務所">
+                </picture>
+              </div>
+              <div class="works-item__textarea">
+                <p>
+                  【新築】
+                  <br>東京都A.F様自宅件事務所
+                </p>
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="works__item works-item thumb fade-in fade-in-delay3" data-src="./img/PC_WORKS_modal_04.jpg" data-text="【都市開発】山形県銀山温泉協同組合">
+              <div class="works-item__image">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/PC_WORKS_04.jpg">
+                  <img src="./img/SP_WORKS_04.jpg" alt="山形県銀山温泉協同組合">
+                </picture>
+              </div>
+              <div class="works-item__textarea">
+                <p>
+                  【都市開発】
+                  <br>山形県銀山温泉協同組合
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <!-- news      -->
+      <section class="news" id="news">    
+        <div class="news__inner inner">
+          <div class="section-title fade-in">
+            <h2 class="section-title__en">NEWS</h2>
+            <p class="section-title__ja">お知らせ</p>
+          </div>
+          <div class="news__contents">
+          <!-- 1 -->
+            <div class="news__blocks  fade-in fade-in-delay">
+              <div class="news__block news-block">
+                <div class="news-block-title">
+                  <h3>お知らせ</h3>
+                </div>            
+                <div class="news-block__items">
+                  <div class="news__entry">
+                    <a href="#" class="news__item">
+                        <div class="news-block-date">
+                          <time datetime="0000-00-00">0000.00</time>
+                        </div>
+                        <div class="news-block-caption">
+                          <p>公式Instagram、YouTubeはじめました。</p>
+                        </div>
+                      </a>
+                  </div>
+                  <div class="news__entry">
+                    <a href="#" class="news__item">
+                      <div class="news-block-date">
+                        <time datetime="0000-00-00">0000.00</time>
+                      </div>
+                      <div class="news-block-caption">
+                        <p>非住宅 木造建築フェアに出展します。</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="news__entry">
+                    <a href="#" class="news__item">
+                      <div class="news-block-date">
+                        <time datetime="0000-00-00">0000.00</time>
+                      </div>
+                      <div class="news-block-caption">
+                        <p>公式ホームページがリニューアルしました。</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="news_button">               
+                    <div class="button_box">        
+                      <a href="#">more</a>
+                      <img src="./img/arrow.jpg" alt="矢印の画像">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- 2 -->
+            <div class="news__blocks  fade-in fade-in-delay">
+                <div class="news__block news-block">
+                  <div class="news-block-title">
+                    <h3>ブログ</h3>
+                  </div>
+                  
+                  <div class="news-block__items">
+                    <div class="news__entry">
+                      <a href="#" class="news__item">
+                          <div class="news-block-date">
+                            <time datetime="0000-00-00">0000.00</time>
+                          </div>
+                          <div class="news-block-caption">
+                            <p>あけましておめでとうございます。〜会長から社員まで〜</p>
+                          </div>
+                        </a>
+                    </div>
+                    <div class="news__entry">
+                      <a href="#" class="news__item">
+                        <div class="news-block-date">
+                          <time datetime="0000-00-00">0000.00</time>
+                        </div>
+                        <div class="news-block-caption">
+                          <p>【検証】土地と人に相性はあるのか？</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="news__entry">
+                      <a href="#" class="news__item">
+                        <div class="news-block-date">
+                          <time datetime="0000-00-00">0000.00</time>
+                        </div>
+                        <div class="news-block-caption">
+                          <p>弊社創業初の入社式が行われました。</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="news_button">               
+                      <div class="button_box">        
+                        <a href="#">more</a>
+                        <img src="./img/arrow.jpg" alt="矢印の画像">
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMPANY -->
+      <section class="company" id="company">    
+        <div class="company__inner inner">
+          <div class="section-title fade-in">
+          <h2 class="section-title__en">COMPANY</h2>
+          <p class="section-title__ja">会社概要</p>
+          </div>
+          <div class="company__contents">
+            <div class="company__item fade-in">
+            <div class="company__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d13412.719029688213!2d129.82065105927236!3d32.81400177836784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z44CSODUyLTgwNjXjgIDplbfltI7nnIzplbfltI7luILmqKrlsL7il4vkuIHnm67il4st4peL!5e0!3m2!1sja!2sjp!4v1772484838819!5m2!1sja!2sjp"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="company__content"> 
+              <div class="company_textbox">
+                <div class="company__title">
+                  <h3 >株式会社 北村建設興業</h3> 
+                </div>                                        
+                <div class="company__address">
+                  <p>〒852-8065
+                    <br>長崎県長崎市横尾○丁目○-○
+                  </p>
+                </div>
+                <div class="company__tell">
+                  <p>TEL <span class="pc">000-000-0000</span>
+                  <a href="tel:000-0000-0000" class="sp">000-000-0000</a></p>
+                </div>
+                <div class="company__email">
+                  <span>Mail　</span><a href="mailto:info@example.com">info@example.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- contact -->
+      <section id="contact">
+        <div class="inner">
+          <div class="section-title fade-in">
+            <h2 class="section-title__en">CONTACT</h2>
+            <p class="section-title__ja">お問い合わせ</p>
+          </div>
+          <div class="contact__txt fade-in">
+            ３営業日以内にメールにてご連絡いたします。*は入力必須項目となります。
+          </div>
+
+          <form action="#" method="post">
+            <div class="form__items fade-in fade-in-delay">
+              <!-- 名前（横並び） -->
+              <div class="form__item form__item--row">
+                <label for="your-name" class="form__label">お名前 *</label>
+                <input type="text" name="your-name" id="your-name" class="form-control" placeholder="例：北村 太郎">
+              </div>
+
+              <!-- 性別（横並び・ラジオ） -->
+              <div class="form__item form__item--row">
+                <span class="form__label">性別</span>
+                <div class="form__radio-group">
+                  <label class="form__radio-label">
+                    <input type="radio" name="your-gender" id="gender-male" value="male"> 男性
+                  </label>
+                  <label class="form__radio-label">
+                    <input type="radio" name="your-gender" id="gender-female" value="female"> 女性
+                  </label>
+                </div>
+              </div>
+              
+              <!-- メールアドレス（横並び） -->
+              <div class="form__item form__item--row">
+                <label for="your-email" class="form__label">メールアドレス *</label>
+                <input type="email" name="your-email" id="your-email" class="form-control" placeholder="例：aaaaaaaa@gmail.com">
+              </div>
+
+              <!-- お問い合わせ種別（横並び） -->
+              <div class="form__item form__item--row">
+                <label for="your-type" class="form__label">問い合わせ種別</label>
+                <select name="your-type" id="your-type" class="form-control form-select">
+                  <option value="">家づくりについて</option>
+                  <option value="general">一般的なご質問</option>
+                  <option value="support">サポート</option>
+                  <option value="other">その他</option>
+                </select>
+              </div>
+
+              <!-- 内容（縦並び） -->
+              <div class="form__item form__item--column">
+                <label for="your-content" class="form__label">内容 *</label>
+                <textarea name="your-content" id="your-content" class="form-control form-textarea"></textarea>
+              </div>
+
+              <!-- 何を見て知りましたか -->
+              <div class="form__item form__item--column">
+                <span class="form__title">何を見て当社HPを知りましたか？（複数回答可） *</span>
+                <div class="form__checkbox-group">
+                  <label class="form__checkbox-label">
+                    <input type="checkbox" name="how" id="how-web" value="web"> インターネット
+                  </label>
+                  <label class="form__checkbox-label">
+                    <input type="checkbox" name="how" id="how-sns" value="sns"> チラシ
+                  </label>
+                  <label class="form__checkbox-label">
+                    <input type="checkbox" name="how" id="how-friend" value="friend"> 住宅展示場
+                  </label>
+                  <label class="form__checkbox-label">
+                    <input type="checkbox" name="how" id="how-flyer" value="flyer"> 看板
+                  </label>
+                  <label class="form__checkbox-label">
+                    <input type="checkbox" name="how" id="how-magazine" value="magazine"> 各種SNS
+                  </label>
+                  <label class="form__checkbox-label">
+                    <input type="checkbox" name="how" id="how-tv" value="tv"> 紹介
+                  </label>
+                  <label class="form__checkbox-label">
+                    <input type="checkbox" name="how" id="how-search" value="search"> 通りがかり
+                  </label>
+                  <label class="form__checkbox-label">
+                  <input type="checkbox" name="how" id="how-other" value="other"> その他
+                  </label>
+                </div>
+              </div>
+
+              
+
+              <!-- 個人情報（アコーディオン） -->
+              <div class="form__item form__item--column">
+              <span class="form__title">個人情報保護方針</span>
+
+              <div class="privacy-content">
+                <div class="privacy-content__scroll">
+                <div class="privacy-content__inner">
+                  <h3>個人情報取扱事業者の氏名又は名称(法24条1項1号)</h3>
+                  <p>株式会社 北村建設興業</p>
+
+                  <h3>個人情報の取り扱い</h3>
+                  <p>
+                    弊社は、個人情報保護に関連する法令を遵守し、
+                    お客様からご提供いただく個人情報を細心の注意を払って取り扱っております。
+                    このプライバシーポリシーでは、当社におけるお客様の個人情報の取扱いについてご説明しております。
+                  </p>
+
+                  <h3>個人情報の利用目的(法18条、15条)</h3>
+                  <p>
+                    弊社は建築物の設計、施工を主とした当社業務ならびに
+                    アフターサービスをさせていただく上で、
+                    お客様の個人情報を原則として次の利用目的の範囲内で利用させていただきます。
+                  </p>
+                  <ul>
+                    <li>ご注文いただいた工事を適切に完成させるため</li>
+                    <li>商品及びサービスの提供に関する手続きを支援するため</li>
+                    <li>商品やサービスのお知らせをお届けするため</li>
+                    <li>見学会等へご来場のお客様へのご商談のため</li>
+                    <li>商品やサービス向上のため</li>
+                  </ul>
+
+                  <h3>保有個人データ利用目的(法24条1項2号)</h3>
+                  <ul>
+                    <li>アフターメンテナンスを行うため</li>
+                    <li>サービス提供のため</li>
+                    <li>新商品などの情報をお知らせするため</li>
+                    <li>お客様に適したサービスを提供するため</li>
+                  </ul>
+
+                  <h3>個人情報の安全対策</h3>
+                  <p>
+                    お客様の個人情報を安全に管理・運営するよう努めており、
+                    不正アクセスや漏えい等を防止するための合理的かつ適切な安全対策を実施しています。
+                  </p>
+
+                  <h3>プライバシーポリシーに関するお問合せ先</h3>
+                  <p>
+                    株式会社北村建設興業<br>
+                    長崎県長崎市横尾○丁目○-○<br>
+                    TEL：000-000-0000<br>
+                    FAX：000-000-0000<br>
+                    Mail：info@example.com
+                  </p>
+                </div>
+                </div>
+              </div>
+            </div>
+            <!-- 送信ボタン -->
+            <div class="contact__button">
+              <input type="submit" name="submit" class="form-submit" value="内容に同意して送信">
+            </div>
+            </div>
+          </form>
+        </div>
+      </section>  
+    </main>
+<!-- footer -->
+    <footer class="footer">
+      <div class="footer__main">
+          <a href="#top" class="footer__title">株式会社 北村建設興業</a>
+          <!-- <div class="footer__content"> -->
+            <nav class="footer__nav">
+              <ul>
+                <li>
+                  <a href="#about">ABOUT </a>
+                </li>
+                <li>
+                  <a href="#service">SERVICE</a>
+                </li>
+                <li>
+                  <a href="#works">WORKS</a>
+                </li>
+                <li>
+                  <a href="#news">NEWS</a>
+                </li>
+                <li>
+                  <a href="#company">COMPANY</a>
+                </li>
+                <li>
+                  <a href="#contact">CONTACT</a>
+                </li>
+              </ul>
+            </nav> 
+            <ul class="footer__sns sns">
+              <li>
+                <a href="" class="x">
+                  <img src="./img/icon-twitter.svg" alt="x">
+                </a>
+              </li>
+              <li>
+                <a href="" class="facebook">
+                  <img src="./img/icon-facebook.svg" alt="facebook">
+                </a>
+              </li>
+              <li>
+                <a href="" class="youtube">
+                  <img src="./img/icon-youtube.svg" alt="youtube">
+                </a>
+              </li>
+              <li>
+                <a href="" class="instagram">
+                  <img src="./img/icon-instagram.svg" alt="instagram">
+                </a>
+              </li>
+            </ul>
+          </div>
+        <div class="footer__copyright">
+          <p>&copy;Copyright0000　<span class="ib">kitamurakensetukogyo</span></p>
+        </div>
+        <!-- </div> -->
+    </footer>
   </div>
+
+  <!-- モーダル -->
+  <div id="modal-overlay">
+    <div id="modal-box">
+      <button id="modal-close">✕</button>
+      <img src="#" alt="" id="modal-img">
+      <div class="modal-text" id="modalText">
+        説明文
+      </div>
+    </div>
+  </div>
+
+  <!-- トップに戻るボタン -->
+  <a href="#top" class="page-top" id="js-pagetop">
+    <img src="img/icon-top.svg" alt="TOPへ戻る">
+  </a>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
