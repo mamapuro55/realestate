@@ -19,27 +19,30 @@ $(function () {
   checkScroll(); // 初期表示でも実行
 
   // ------------------------------------------
-  // 2. スムーススクロール
+  // 2. スムーススクロール(★これを追加)
   // ------------------------------------------
   $('a[href^="#"]').on('click', function (e) {
+    const targetId = $(this).attr('href');
+
+    if (targetId === '#top') return;
+
     e.preventDefault();
 
-    const targetId = $(this).attr('href');
     const $target = $(targetId);
-
     if (!$target.length) return;
 
     const headerHeight = $header.outerHeight();
     const targetTop = $target.offset().top - headerHeight;
 
     $('html, body').animate({ scrollTop: targetTop }, 500, 'swing');
-    if ($(this).closest('.header__nav.pc').length) {
-    $pcNavLinks.removeClass('is-active');
-    $(this).addClass('is-active');
-    }
-    closeMenu();
-  });
 
+    if ($(this).closest('.header__nav.pc').length) {
+      $pcNavLinks.removeClass('is-active');
+      $(this).addClass('is-active');
+    }
+    closeMenu(); // ★メニューを閉じる処理は、ここに含まれている
+  });
+ 
   // ------------------------------------------
   // 3. ハンバーガーメニュー
   // ------------------------------------------
@@ -140,7 +143,6 @@ $(function () {
   });
 
 });
-
 
 // ------------------------------------------
 // 1. スクロール位置でヘッダー・TOPボタン切り替え
