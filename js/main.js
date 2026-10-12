@@ -19,14 +19,18 @@ $(function () {
   checkScroll(); // 初期表示でも実行
 
   // ------------------------------------------
-  // 2. スムーススクロール(★これを追加)
+  // 2. スムーススクロール
   // ------------------------------------------
   $('a[href^="#"]').on('click', function (e) {
-    const targetId = $(this).attr('href');
+      e.preventDefault();
+      closeMenu();
 
-    if (targetId === '#top') return;
+      const targetId = $(this).attr('href');
 
-    e.preventDefault();
+    if (targetId === '#top') {
+      $('html, body').animate({ scrollTop: 0 }, 500, 'swing');
+      return;
+    }
 
     const $target = $(targetId);
     if (!$target.length) return;
@@ -40,9 +44,8 @@ $(function () {
       $pcNavLinks.removeClass('is-active');
       $(this).addClass('is-active');
     }
-    closeMenu(); // ★メニューを閉じる処理は、ここに含まれている
   });
- 
+
   // ------------------------------------------
   // 3. ハンバーガーメニュー
   // ------------------------------------------
@@ -147,30 +150,21 @@ $(function () {
 // ------------------------------------------
 // 1. スクロール位置でヘッダー・TOPボタン切り替え
 // ------------------------------------------
-const $pageTop = $('#js-pagetop');
-
-function checkScroll() {
-  const scrollY = $(window).scrollTop();
-  const aboutTop = $('#about').length ? $('#about').offset().top : Infinity;
-
-  const isScrolled = scrollY >= aboutTop;
-
-  // ヘッダー切り替え
-  $header.toggleClass('is-scrolled', isScrolled);
-
-  // TOPボタン表示
-  $pageTop.toggleClass('is-show', isScrolled);
-}
-
 $(function () {
   const $pageTop = $('#js-pagetop');
 
   $(window).on('scroll', function () {
-    if ($(window).scrollTop() > 300) {
+    const fvBottom = $('#fv').outerHeight();                 // FVの下端の位置
+    const btnTop = $pageTop[0].getBoundingClientRect().top;  // 画面内でのボタンの上端の位置
+
+    // ボタンの位置までFVが抜けたら表示
+    if ($(window).scrollTop() + btnTop > fvBottom) {
       $pageTop.addClass('is-show');
     } else {
       $pageTop.removeClass('is-show');
     }
   });
 });
+
+
 
