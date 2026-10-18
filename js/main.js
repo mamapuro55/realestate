@@ -3,7 +3,6 @@ $(function () {
   const $hamburger = $('#js-hamburger');
   const $menu = $('.header-menu');
   const $overlay = $('#js-overlay');
-  const $pcNavLinks = $('.header__nav.pc a');
 
   // ------------------------------------------
   // 1. スクロール位置でヘッダー切り替え
@@ -26,10 +25,11 @@ $(function () {
       closeMenu();
 
       const targetId = $(this).attr('href');
+      if (targetId === '#') return;
 
-    if (targetId === '#top') {
-      $('html, body').animate({ scrollTop: 0 }, 500, 'swing');
-      return;
+      if (targetId === '#top') {
+        $('html, body').animate({ scrollTop: 0 }, 500, 'swing');
+        return;
     }
 
     const $target = $(targetId);
@@ -40,10 +40,6 @@ $(function () {
 
     $('html, body').animate({ scrollTop: targetTop }, 500, 'swing');
 
-    if ($(this).closest('.header__nav.pc').length) {
-      $pcNavLinks.removeClass('is-active');
-      $(this).addClass('is-active');
-    }
   });
 
   // ------------------------------------------
@@ -85,8 +81,19 @@ $(function () {
     const imgSrc = $(this).data("src");
     const text = $(this).data("text");
 
+    // 「】」の位置で【種別】と名前に分ける
+    const splitIndex = text.indexOf("】") + 1;
+    const type = text.slice(0, splitIndex);
+    const name = text.slice(splitIndex);
+
     $("#modal-img").attr("src", imgSrc);
-    $("#modalText").text(text);
+    // $("#modalText").text(text);
+    $("#modalText")
+    .empty()
+    .append(
+      $('<span class="modal-text__type">').text(type),
+      $('<span class="modal-text__name">').text(name)
+    );
 
     $("#modal-overlay").addClass("active");
 

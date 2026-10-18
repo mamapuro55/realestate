@@ -148,8 +148,10 @@ header
   padding-inline: 30px;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 999;
+  @media (max-width: 920px) {
+    padding-inline: 20px;
+  }
   @media (max-width: 767px) {
     height: 50px;
     padding: 0 20px;
@@ -160,6 +162,10 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
+    column-gap: 60px;
+    @media (max-width: 920px) {
+      column-gap: 40px;
+    }
   }
 
   &.is-scrolled {
@@ -175,8 +181,7 @@ header
       line-height: calc(20 / 20);
       white-space: nowrap;
       transition: opacity 0.4s, color 0.4s;
-      @media (max-width: 900px) {
-        height: 50px;
+      @media (max-width: 920px) {
         font-size: 1.8rem;
       }
 
@@ -202,7 +207,7 @@ header
       list-style: none;
       margin: 0;
       padding: 0;
-      @media (max-width: 900px) {
+      @media (max-width: 920px) {
         column-gap: 16px;
       }
       li {
@@ -215,32 +220,25 @@ header
           color: #fff;
           line-height: calc(18 / 18);
           white-space: nowrap;
-          // transition: opacity 0.4s, color 0.4s;
           &::after {
             content: "";
             position: absolute;
             left: 0;
             bottom: 27px;
             width: 100%;
-            height: 2px;
+            height: 1px;
             background-color: currentColor;
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 0.4s ease;
           }
-          @media (max-width: 900px) {
+          @media (max-width: 920px) {
             font-size: 1.6rem;
           }
           @media (min-width: 768px) and (hover: hover) {
-            // &:hover {
-            //   opacity: 0.7;
-            // }
             &:hover::after {
               transform: scaleX(1);
             }
-          }
-          &.is-active::after {
-            transform: scaleX(1);
           }
         }
       }
@@ -275,28 +273,29 @@ header
     height: 4px;
     border-radius: 20px;
     background-color: var(--color-main);
+    transform: translateY(-50%);
     transition: opacity 0.4s;
     &:nth-of-type(1) {
-      top: 9px;
+      top: 26%;
     }
     &:nth-of-type(2) {
-      top: 21px;
+      top: 50%;
     }
     &:nth-of-type(3) {
-      top: 33px;
+      top: 74%;
     }
   }
   &.is-active {
     span:nth-of-type(1) {
-      top: 23px;
-      transform: rotate(-45deg);
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
     }
     span:nth-of-type(2) {
       opacity: 0;
     }
     span:nth-of-type(3) {
-      top: 23px;
-      transform: rotate(45deg);
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
     }
   }
 }
@@ -466,9 +465,7 @@ about
       font-size: calc(16 / 375 * 100vw);
       line-height: 1.65;
       margin-block-start: 1.65em;
-      letter-spacing: 0.25em;
-      // margin-right: 0;
-      // gap: 30px;         
+      letter-spacing: 0.25em;         
     }
   }
 }
@@ -479,7 +476,7 @@ about
 .service {
   padding-block: 83px 79px;
   padding-inline: 30px;
-  background-color: rgb(75 150 0 / 10%);
+  background-color: rgb(77 150 0 / 10%);
   @media (max-width: 767px) {
     padding-block: 50px;
   }
@@ -525,10 +522,9 @@ about
     font-size: 1.6rem;
     line-height: calc(25 / 16);
     @media (max-width: 767px) {
-    margin-top: 6px;
+      margin-top: 6px;
+    }
   }
-  }
-
 }
 
 .service_textbox {
@@ -537,7 +533,7 @@ about
   padding: 50px 27px 41px 68px;
   position: relative;
   @media (max-width: 970px) {
-    padding: 30px 18px;
+    padding-inline: 18px;
   }
   @media (max-width: 767px) {
     margin-top: 0;
@@ -552,9 +548,6 @@ about
     top: 0;
     right: 0;
     z-index: -1;
-    @media (max-width: 920px) {
-      width: calc(450 / 320 * 100%);
-    }
     @media (max-width: 767px) {
       display: none;
     }
@@ -567,8 +560,8 @@ about
       font-size: 2rem;
     }
     @media (max-width: 767px) {
-      width: 100%;
-      font-size: 2rem;
+      // width: 100%;
+      // font-size: 2rem;
       line-height: calc(25 / 20);
     }
   }
@@ -577,13 +570,13 @@ about
     font-size: 1.6rem;
     margin-top: 19px;
     line-height: calc(25 / 16);
+    @media (max-width: 920px) {
+      font-size: 1.4rem;
+    } 
     @media (max-width: 767px) {
-    position: static;
-    width: 100%;
-    margin-top: 18px;
-    padding-bottom: 0;
-    font-size: 1.6rem;
-    line-height: calc(25 / 16);
+      margin-top: 18px;
+      padding-bottom: 0;
+      font-size: 1.6rem;
     }
   }
 } 
@@ -593,7 +586,7 @@ about
   .service_textbox {
     padding: 50px 0 42px 40px;
       @media (max-width: 970px) {
-      padding: 30px 20px;
+      padding-inline: 20px;
       }
       @media (max-width: 767px) {
       padding: 19px 20px 12px;
@@ -611,11 +604,6 @@ about
     text-align: right;
     @media (max-width: 767px) {
       text-align: left;
-    }
-  }
-  .service__text br {
-    @media (min-width: 768px) and (max-width: 780px) {
-      display: none;
     }
   }
 }
@@ -657,9 +645,6 @@ about
 
   &__item {
     width: calc(200 / 920 * 100%);
-    @media (max-width: 980px) {
-      width: calc(280 / 920 * 100%);
-    }
     @media (max-width: 767px) {
       width: 100%;
     }
@@ -680,8 +665,11 @@ about
     @media (max-width: 767px) {
       margin-top: 11px;
     }
+    span {
+      display: inline-block;
     }
   }
+}
 
 /* ===== サムネイル ===== */
 .thumb {
@@ -736,15 +724,17 @@ about
 
 /* ===== 拡大画像 ===== */
 .modal__img {
-  display: block;
-  width: 100%;
-  height: auto;
   aspect-ratio: auto;
 }
 
 /* ===== 案件名 ===== */
 .modal-text {
   margin-top: 8px;
+  span {
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
 }
 
 /* ===== ✕ボタン ===== */
@@ -774,7 +764,7 @@ about
   padding-block: 81px;
   padding-inline: 30px;
   background-color: 
-  rgb(75 150 0 / 10%);
+  rgb(77 150 0 / 10%);
   @media (max-width: 767px) {
     padding-block: 50px;
   }
@@ -847,13 +837,11 @@ about
     font-size: 1.8rem;
     line-height: calc(25 / 18);
     margin-top: 6px;
-    @media (max-width: 767px) {
-      overflow: hidden;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
     }
-  }
 }
 
 .button_box {
@@ -865,11 +853,6 @@ about
   width: 80px;
   text-decoration: none;
   transition: transform 0.3s ease;
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
   @media (min-width: 768px) and (hover: hover) {
   &:hover{
       transform: translateX(10px);
@@ -937,7 +920,7 @@ company
   padding: 48px 20px 42px 42px;
   position: relative;
   @media (max-width: 920px) {
-    padding: 25px 18px 25px 25px;
+    padding-inline: 18px 25px;
   }
   @media (max-width: 767px) {
     padding: 19px 20px 13px;
@@ -951,9 +934,6 @@ company
     top: 0;
     right: 0;
     z-index: -1;
-    @media (max-width: 920px) {
-      width: calc(450 / 320 * 100%);
-    }
     @media (max-width: 767px) {
     display: none;
     }
@@ -1230,8 +1210,8 @@ input[type="radio"] {
 
 input[type="radio"]:checked {
   background-color: #000;
-  border-color: #808000;
-  box-shadow: inset 0 0 0 6px #fff; /* 内側に黒い円を描く */
+  // border-color: #808000;
+  box-shadow: inset 0 0 0 7px #fff;
 }
 
 /* 何を見て知りましたか*/
@@ -1242,18 +1222,20 @@ input[type="checkbox"] {
   width: 20px;
   height: 20px;
   position: relative;
+  flex-shrink: 0;
+  margin: 0;
 }
 
 input[type="checkbox"]:checked::after {
   content: "";
   position: absolute;
-  left: 5px;
-  top: 1px;
+  inset: 0;
+  margin: auto;
   width: 6px;
   height: 12px;
   border-right: 2px solid #000;
   border-bottom: 2px solid #000;
-  transform: rotate(45deg);
+  transform: translateY(-1px) rotate(45deg);
 }
 
 .form__checkbox-group {
@@ -1503,11 +1485,6 @@ footer
   display: block;
   width: 2.8rem;
   transition: opacity 0.4s;
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
 }
 
 @media (min-width: 768px) {
@@ -1532,11 +1509,6 @@ TOPに戻るボタン
     right: 20px;
     bottom: 60px;
     width: 50px;
-  }
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
   }
     &.is-show {
     opacity: 1;

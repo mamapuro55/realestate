@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
   <title>株式会社北村建設興業</title>
   <meta name="description" content="あなたと共に伝統とイマを繋ぐ新たな技術革新を起こし続ける建設会社です。">
   <meta name="robots" content="noindex">
@@ -229,7 +230,7 @@
               <div class="works-item__textarea">
                 <p>
                 【新築】
-                <br class="pc-br">長崎県T.O様自宅
+                <br class="pc-br"><span>長崎県</span><span>T.O様自宅</span>
                 </p>
               </div>
             </div>
@@ -244,7 +245,7 @@
               <div class="works-item__textarea">
                 <p>
                   【リノベーション】
-                  <br>京都府カトリック丹波教会
+                  <br><span>京都府</span><span>カトリック丹波教会</span>
                 </p>
               </div>
             </div>
@@ -260,7 +261,7 @@
               <div class="works-item__textarea">
                 <p>
                   【新築】
-                  <br>東京都A.F様自宅兼事務所
+                  <br><span>東京都</span><span>A.F様自宅兼事務所</span>
                 </p>
               </div>
             </div>
@@ -276,7 +277,7 @@
               <div class="works-item__textarea">
                 <p>
                   【都市開発】
-                  <br>山形県銀山温泉協同組合
+                  <br><span>山形県</span><span>銀山温泉協同組合</span>
                 </p>
               </div>
             </div>
@@ -402,11 +403,11 @@
                 <h3 class="company__title">
                   株式会社 北村建設興業
                 </h3>                                        
-                <div class="company__address">
+                <address class="company__address">
                   <p>〒852-8065
                     <br>長崎県長崎市横尾○丁目○-○
                   </p>
-                </div>
+                </address>
                 <div class="company__tell">
                   <p>TEL <span class="pc">000-000-0000</span>
                   <a href="tel:000-000-0000" class="sp">000-000-0000</a></p>
@@ -436,7 +437,7 @@
               <!-- 名前（横並び） -->
               <div class="form__item form__item--row">
                 <label for="your-name" class="form__label">お名前 *</label>
-                <input type="text" name="your-name" id="your-name" class="form-control" placeholder="例：北村 太郎">
+                <input type="text" name="your-name" id="your-name" class="form-control" placeholder="例：北村 太郎" required>
               </div>
 
               <!-- 性別（横並び・ラジオ） -->
@@ -455,7 +456,7 @@
               <!-- メールアドレス（横並び） -->
               <div class="form__item form__item--row">
                 <label for="your-email" class="form__label">メールアドレス *</label>
-                <input type="email" name="your-email" id="your-email" class="form-control" placeholder="例：aaaaaaaa@gmail.com">
+                <input type="email" name="your-email" id="your-email" class="form-control" placeholder="例：aaaaaaaa@gmail.com" required>
               </div>
 
               <!-- お問い合わせ種別（横並び） -->
@@ -472,7 +473,7 @@
               <!-- 内容（縦並び） -->
               <div class="form__item form__item--column">
                 <label for="your-content" class="form__label">内容 *</label>
-                <textarea name="your-content" id="your-content" class="form-control form-textarea"></textarea>
+                <textarea name="your-content" id="your-content" class="form-control form-textarea" required></textarea>
               </div>
 
               <!-- 何を見て知りましたか -->
@@ -483,25 +484,25 @@
                     <input type="checkbox" name="how" id="how-web" value="web"> インターネット
                   </label>
                   <label class="form__checkbox-label">
-                    <input type="checkbox" name="how" id="how-sns" value="sns"> チラシ
+                    <input type="checkbox" name="how" id="how-flyer" value="flyer"> チラシ
                   </label>
                   <label class="form__checkbox-label">
-                    <input type="checkbox" name="how" id="how-friend" value="friend"> 住宅展示場
+                    <input type="checkbox" name="how" id="how-showroom" value="showroom"> 住宅展示場
                   </label>
                   <label class="form__checkbox-label">
-                    <input type="checkbox" name="how" id="how-flyer" value="flyer"> 看板
+                    <input type="checkbox" name="how" id="how-signboard" value="signboard"> 看板
                   </label>
                   <label class="form__checkbox-label">
-                    <input type="checkbox" name="how" id="how-magazine" value="magazine"> 各種SNS
+                    <input type="checkbox" name="how" id="how-sns" value="sns"> 各種SNS
                   </label>
                   <label class="form__checkbox-label">
-                    <input type="checkbox" name="how" id="how-tv" value="tv"> 紹介
+                    <input type="checkbox" name="how" id="how-referral" value="referral"> 紹介
                   </label>
                   <label class="form__checkbox-label">
-                    <input type="checkbox" name="how" id="how-search" value="search"> 通りがかり
+                    <input type="checkbox" name="how" id="how-passing" value="passing"> 通りがかり
                   </label>
                   <label class="form__checkbox-label">
-                  <input type="checkbox" name="how" id="how-other" value="other"> その他
+                    <input type="checkbox" name="how" id="how-other" value="other"> その他
                   </label>
                 </div>
               </div>
@@ -571,7 +572,6 @@
     <footer id="footer" class="footer">
       <div class="footer__main">
           <a href="#top" class="footer__title">株式会社 北村建設興業</a>
-          <!-- <div class="footer__content"> -->
             <nav class="footer__nav">
               <ul>
                 <li>
@@ -596,22 +596,22 @@
             </nav> 
             <ul class="footer__sns sns">
               <li>
-                <a href="" class="x">
+                <a href="#" class="x">
                   <img src="./img/icon-twitter.svg" alt="x">
                 </a>
               </li>
               <li>
-                <a href="" class="facebook">
+                <a href="#" class="facebook">
                   <img src="./img/icon-facebook.svg" alt="facebook">
                 </a>
               </li>
               <li>
-                <a href="" class="youtube">
+                <a href="#" class="youtube">
                   <img src="./img/icon-youtube.svg" alt="youtube">
                 </a>
               </li>
               <li>
-                <a href="" class="instagram">
+                <a href="#" class="instagram">
                   <img src="./img/icon-instagram.svg" alt="instagram">
                 </a>
               </li>
@@ -620,14 +620,13 @@
         <div class="footer__copyright">
           <p>&copy;Copyright0000　<span class="ib">kitamurakensetukogyo</span></p>
         </div>
-        <!-- </div> -->
     </footer>
   </div>
 
   <!-- モーダル -->
   <div id="modal-overlay" class="modal">
     <div id="modal-box" class="modal__box">
-      <button type="button"  id="modal-close" class="modal__close">✕</button>
+      <button type="button" id="modal-close" class="modal__close">✕</button>
       <img src="#" alt="" id="modal-img"  class="modal__img">
       <div class="modal-text" id="modalText">
         説明文
